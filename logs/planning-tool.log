@@ -1,45 +1,21 @@
-2026-01-15T00:23:51.904+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m41s221ms).
-2026-01-15T01:39:27.186+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m4s361ms).
-2026-01-15T01:57:49.086+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m51s732ms).
-2026-01-15T02:19:23.959+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m34s741ms).
-2026-01-15T02:22:40.965+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m46s971ms).
-2026-01-15T03:09:13.291+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m31s759ms).
-2026-01-15T03:16:40.191+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m26s905ms).
-2026-01-15T03:52:51.135+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m10s948ms).
-2026-01-15T04:26:01.220+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m10s80ms).
-2026-01-15T04:53:28.878+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m27s659ms).
-2026-01-15T05:40:26.410+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m57s536ms).
-2026-01-15T05:58:26.553+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m142ms).
-2026-01-15T06:34:03.651+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m37s99ms).
-2026-01-15T06:59:10.803+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m7s147ms).
-2026-01-15T07:15:12.410+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m1s612ms).
-2026-01-15T07:32:53.038+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m40s626ms).
-2026-01-15T08:04:13.550+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m20s496ms).
-2026-01-15T08:09:41.610+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m28s76ms).
-2026-01-15T08:11:32.180+02:00  WARN 48300 --- [planningtool] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s499ms).
-2026-01-15T12:28:56.062+02:00  INFO 48300 --- [planningtool] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-15T12:28:56.149+02:00  INFO 48300 --- [planningtool] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-01-15T12:28:56.239+02:00  INFO 48300 --- [planningtool] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-15T12:28:56.339+02:00  INFO 48300 --- [planningtool] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-15T12:28:56.350+02:00  INFO 48300 --- [planningtool] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-15T12:29:02.192+02:00  INFO 17261 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 17261 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
-2026-01-15T12:29:02.196+02:00  INFO 17261 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
-2026-01-15T12:29:02.251+02:00  INFO 17261 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-01-15T12:29:02.252+02:00  INFO 17261 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-01-15T12:29:02.960+02:00  INFO 17261 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-15T12:29:03.006+02:00  INFO 17261 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 12 JPA repository interfaces.
-2026-01-15T12:29:03.515+02:00  INFO 17261 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-15T12:29:03.524+02:00  INFO 17261 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-15T12:29:03.525+02:00  INFO 17261 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-01-15T12:29:03.546+02:00  INFO 17261 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1293 ms
-2026-01-15T12:29:03.706+02:00  INFO 17261 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-01-15T12:29:03.783+02:00  INFO 17261 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
-2026-01-15T12:29:04.077+02:00  INFO 17261 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-15T12:29:04.099+02:00  INFO 17261 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-15T12:29:04.242+02:00  INFO 17261 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4490ead4
-2026-01-15T12:29:04.243+02:00  INFO 17261 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-15T12:29:04.343+02:00  WARN 17261 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-01-15T12:29:04.354+02:00  INFO 17261 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-01-15T12:49:32.474+02:00  INFO 18068 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 18068 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
+2026-01-15T12:49:32.480+02:00  INFO 18068 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
+2026-01-15T12:49:32.606+02:00  INFO 18068 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-15T12:49:32.606+02:00  INFO 18068 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-15T12:49:34.084+02:00  INFO 18068 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-15T12:49:34.219+02:00  INFO 18068 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 12 JPA repository interfaces.
+2026-01-15T12:49:35.208+02:00  INFO 18068 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-15T12:49:35.223+02:00  INFO 18068 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-15T12:49:35.224+02:00  INFO 18068 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-15T12:49:35.280+02:00  INFO 18068 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2672 ms
+2026-01-15T12:49:35.621+02:00  INFO 18068 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-15T12:49:35.739+02:00  INFO 18068 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-15T12:49:36.279+02:00  INFO 18068 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-15T12:49:36.351+02:00  INFO 18068 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-15T12:49:36.742+02:00  INFO 18068 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f5ba203
+2026-01-15T12:49:36.744+02:00  INFO 18068 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-15T12:49:36.814+02:00  WARN 18068 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-15T12:49:36.835+02:00  INFO 18068 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/planningtool?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -51,11 +27,11 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-15T12:29:05.092+02:00  INFO 17261 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-15T12:29:05.464+02:00  INFO 17261 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-15T12:29:05.590+02:00  INFO 17261 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-15T12:29:05.704+02:00  WARN 17261 --- [planningtool] [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
-2026-01-15T12:29:05.737+02:00 ERROR 17261 --- [planningtool] [restartedMain] o.a.c.c.C.[.[localhost].[/planningtool]  : Exception starting filter [jwtAuthenticationFilter]
+2026-01-15T12:49:38.231+02:00  INFO 18068 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-15T12:49:38.417+02:00  INFO 18068 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T12:49:38.723+02:00  INFO 18068 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-15T12:49:39.160+02:00  WARN 18068 --- [planningtool] [restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2026-01-15T12:49:39.426+02:00 ERROR 18068 --- [planningtool] [restartedMain] o.a.c.c.C.[.[localhost].[/planningtool]  : Exception starting filter [jwtAuthenticationFilter]
 
 java.lang.NullPointerException: Cannot invoke "org.apache.commons.logging.Log.isDebugEnabled()" because "this.logger" is null
 	at org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:235) ~[spring-web-7.0.2.jar:7.0.2]
@@ -105,9 +81,9 @@ java.lang.NullPointerException: Cannot invoke "org.apache.commons.logging.Log.is
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.1.jar:4.0.1]
 
-2026-01-15T12:29:05.739+02:00 ERROR 17261 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardContext   : One or more Filters failed to start. Full details will be found in the appropriate container log file
-2026-01-15T12:29:05.739+02:00 ERROR 17261 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardContext   : Context [/planningtool] startup failed due to previous errors
-2026-01-15T12:29:05.741+02:00  WARN 17261 --- [planningtool] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [planningtool] appears to have started a thread named [HikariPool-1:housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2026-01-15T12:49:39.448+02:00 ERROR 18068 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardContext   : One or more Filters failed to start. Full details will be found in the appropriate container log file
+2026-01-15T12:49:39.449+02:00 ERROR 18068 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardContext   : Context [/planningtool] startup failed due to previous errors
+2026-01-15T12:49:39.467+02:00  WARN 18068 --- [planningtool] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [planningtool] appears to have started a thread named [HikariPool-1:housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
  java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
  java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
@@ -117,7 +93,7 @@ java.lang.NullPointerException: Cannot invoke "org.apache.commons.logging.Log.is
  java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
  java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
  java.base@17.0.12/java.lang.Thread.run(Thread.java:842)
-2026-01-15T12:29:05.742+02:00  WARN 17261 --- [planningtool] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [planningtool] appears to have started a thread named [HikariPool-1:connection-adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2026-01-15T12:49:39.470+02:00  WARN 18068 --- [planningtool] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [planningtool] appears to have started a thread named [HikariPool-1:connection-adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
  java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
  java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
@@ -126,15 +102,15 @@ java.lang.NullPointerException: Cannot invoke "org.apache.commons.logging.Log.is
  java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
  java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
  java.base@17.0.12/java.lang.Thread.run(Thread.java:842)
-2026-01-15T12:29:05.760+02:00  INFO 17261 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-15T12:29:05.763+02:00  WARN 17261 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
-2026-01-15T12:29:05.764+02:00  INFO 17261 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-15T12:29:05.767+02:00  INFO 17261 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-15T12:29:05.771+02:00  INFO 17261 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-15T12:29:05.775+02:00  INFO 17261 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-01-15T12:49:39.551+02:00  INFO 18068 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-15T12:49:39.560+02:00  WARN 18068 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-01-15T12:49:39.563+02:00  INFO 18068 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T12:49:39.605+02:00  INFO 18068 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-15T12:49:39.632+02:00  INFO 18068 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-15T12:49:39.708+02:00  INFO 18068 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-15T12:29:05.782+02:00 ERROR 17261 --- [planningtool] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2026-01-15T12:49:39.762+02:00 ERROR 18068 --- [planningtool] [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.context.ApplicationContextException: Unable to start web server
 	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
@@ -164,24 +140,24 @@ Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[
 	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:134) ~[spring-boot-tomcat-4.0.1.jar:4.0.1]
 	... 18 common frames omitted
 
-2026-01-15T12:33:01.744+02:00  INFO 17466 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 17466 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
-2026-01-15T12:33:01.746+02:00  INFO 17466 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
-2026-01-15T12:33:01.776+02:00  INFO 17466 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-01-15T12:33:01.777+02:00  INFO 17466 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-01-15T12:33:02.320+02:00  INFO 17466 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-15T12:33:02.385+02:00  INFO 17466 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 12 JPA repository interfaces.
-2026-01-15T12:33:02.732+02:00  INFO 17466 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-01-15T12:33:02.740+02:00  INFO 17466 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-15T12:33:02.740+02:00  INFO 17466 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-01-15T12:33:02.760+02:00  INFO 17466 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 983 ms
-2026-01-15T12:33:02.828+02:00  INFO 17466 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-01-15T12:33:02.869+02:00  INFO 17466 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
-2026-01-15T12:33:03.127+02:00  INFO 17466 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-15T12:33:03.147+02:00  INFO 17466 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-15T12:33:03.302+02:00  INFO 17466 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38fc3948
-2026-01-15T12:33:03.303+02:00  INFO 17466 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-15T12:33:03.400+02:00  WARN 17466 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-01-15T12:33:03.418+02:00  INFO 17466 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-01-15T12:55:53.677+02:00  INFO 18396 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 18396 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
+2026-01-15T12:55:53.683+02:00  INFO 18396 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
+2026-01-15T12:55:53.782+02:00  INFO 18396 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-15T12:55:53.782+02:00  INFO 18396 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-15T12:55:55.553+02:00  INFO 18396 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-15T12:55:55.738+02:00  INFO 18396 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154 ms. Found 12 JPA repository interfaces.
+2026-01-15T12:55:57.067+02:00  INFO 18396 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-15T12:55:57.081+02:00  INFO 18396 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-15T12:55:57.081+02:00  INFO 18396 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-15T12:55:57.148+02:00  INFO 18396 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3366 ms
+2026-01-15T12:55:57.534+02:00  INFO 18396 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-15T12:55:57.730+02:00  INFO 18396 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-15T12:55:58.700+02:00  INFO 18396 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-15T12:55:58.833+02:00  INFO 18396 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-15T12:55:59.648+02:00  INFO 18396 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@547d0dcc
+2026-01-15T12:55:59.653+02:00  INFO 18396 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-15T12:56:00.106+02:00  WARN 18396 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-15T12:56:00.162+02:00  INFO 18396 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/planningtool?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -193,19 +169,303 @@ Caused by: java.lang.IllegalStateException: StandardEngine[Tomcat].StandardHost[
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-15T12:33:04.168+02:00  INFO 17466 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-15T12:33:04.269+02:00  INFO 17466 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-15T12:33:04.307+02:00  INFO 17466 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-15T12:33:04.520+02:00  INFO 17466 --- [planningtool] [restartedMain] s.s.l.DefaultSpringSecurityContextSource : Configure with URL ldaps://SABS-AD-VDC1.SABS.co.za:636,ldap://SABS-AD-VDC1.SABS.co.za:389/DC%3DSABS%2CDC%3Dco%2CDC%3Dza and root DN /SABS-AD-VDC1.SABS.co.za:389/DC%3DSABS%2CDC%3Dco%2CDC%3Dza
-2026-01-15T12:33:04.521+02:00  WARN 17466 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/controller/AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authenticationManager' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'authenticationManager' parameter 0: Error creating bean with name 'ldapAuthProvider' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'ldapAuthProvider' parameter 0: Error creating bean with name 'contextSource' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.ldap.DefaultSpringSecurityContextSource]: Factory method 'contextSource' threw exception with message: Invalid name: /SABS-AD-VDC1.SABS.co.za:389/DC=SABS,DC=co,DC=za
-2026-01-15T12:33:04.522+02:00  INFO 17466 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-15T12:33:04.524+02:00  INFO 17466 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-15T12:33:04.530+02:00  INFO 17466 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-01-15T12:33:04.531+02:00  INFO 17466 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-01-15T12:33:04.537+02:00  INFO 17466 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-01-15T12:56:03.151+02:00  INFO 18396 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-15T12:56:03.768+02:00  INFO 18396 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T12:56:04.684+02:00  INFO 18396 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-15T12:56:05.429+02:00  WARN 18396 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/config/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'za.co.sabs.planningtool.service.security.JwtAuthenticationFilter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-15T12:56:05.430+02:00  INFO 18396 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T12:56:05.459+02:00  INFO 18396 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-15T12:56:05.515+02:00  INFO 18396 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-15T12:56:05.522+02:00  INFO 18396 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-15T12:56:05.554+02:00  INFO 18396 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-01-15T12:33:04.543+02:00 ERROR 17466 --- [planningtool] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2026-01-15T12:56:05.624+02:00 ERROR 18396 --- [planningtool] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in za.co.sabs.planningtool.config.SecurityConfig required a bean of type 'za.co.sabs.planningtool.service.security.JwtAuthenticationFilter' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'za.co.sabs.planningtool.service.security.JwtAuthenticationFilter' in your configuration.
+
+2026-01-15T12:56:38.762+02:00  INFO 18475 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 18475 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
+2026-01-15T12:56:38.766+02:00  INFO 18475 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
+2026-01-15T12:56:38.824+02:00  INFO 18475 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-15T12:56:38.824+02:00  INFO 18475 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-15T12:56:39.669+02:00  INFO 18475 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-15T12:56:39.746+02:00  INFO 18475 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 12 JPA repository interfaces.
+2026-01-15T12:56:40.412+02:00  INFO 18475 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-15T12:56:40.426+02:00  INFO 18475 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-15T12:56:40.426+02:00  INFO 18475 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-15T12:56:40.451+02:00  INFO 18475 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1627 ms
+2026-01-15T12:56:40.589+02:00  INFO 18475 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-15T12:56:40.674+02:00  INFO 18475 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-15T12:56:40.996+02:00  INFO 18475 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-15T12:56:41.019+02:00  INFO 18475 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-15T12:56:41.229+02:00  INFO 18475 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@213a54a4
+2026-01-15T12:56:41.231+02:00  INFO 18475 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-15T12:56:41.303+02:00  WARN 18475 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-15T12:56:41.313+02:00  INFO 18475 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/planningtool?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: planningtool/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-15T12:56:42.301+02:00  INFO 18475 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-15T12:56:42.550+02:00  INFO 18475 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T12:56:42.809+02:00  INFO 18475 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-15T12:56:43.078+02:00  WARN 18475 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/config/SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'za.co.sabs.planningtool.service.security.JwtAuthenticationFilter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-15T12:56:43.080+02:00  INFO 18475 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T12:56:43.085+02:00  INFO 18475 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-15T12:56:43.091+02:00  INFO 18475 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-15T12:56:43.094+02:00  INFO 18475 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-15T12:56:43.105+02:00  INFO 18475 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-15T12:56:43.134+02:00 ERROR 18475 --- [planningtool] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in za.co.sabs.planningtool.config.SecurityConfig required a bean of type 'za.co.sabs.planningtool.service.security.JwtAuthenticationFilter' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'za.co.sabs.planningtool.service.security.JwtAuthenticationFilter' in your configuration.
+
+2026-01-15T13:04:06.579+02:00  INFO 18685 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 18685 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
+2026-01-15T13:04:06.581+02:00  INFO 18685 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
+2026-01-15T13:04:06.643+02:00  INFO 18685 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-15T13:04:06.643+02:00  INFO 18685 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-15T13:04:07.261+02:00  INFO 18685 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-15T13:04:07.348+02:00  INFO 18685 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 12 JPA repository interfaces.
+2026-01-15T13:04:07.930+02:00  INFO 18685 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-15T13:04:07.939+02:00  INFO 18685 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-15T13:04:07.939+02:00  INFO 18685 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-15T13:04:07.963+02:00  INFO 18685 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1319 ms
+2026-01-15T13:04:08.176+02:00  INFO 18685 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-15T13:04:08.222+02:00  INFO 18685 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-15T13:04:08.512+02:00  INFO 18685 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-15T13:04:08.534+02:00  INFO 18685 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-15T13:04:08.812+02:00  INFO 18685 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@488ad57b
+2026-01-15T13:04:08.813+02:00  INFO 18685 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-15T13:04:08.904+02:00  WARN 18685 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-15T13:04:08.927+02:00  INFO 18685 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/planningtool?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: planningtool/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-15T13:04:10.085+02:00  INFO 18685 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-15T13:04:10.310+02:00  INFO 18685 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T13:04:10.519+02:00  INFO 18685 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-15T13:04:11.064+02:00  WARN 18685 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'activityController' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/controller/ActivityController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'activityProcessorImpl' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/processor/impl/ActivityProcessorImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Bean named 'activityMapper' is expected to be of type 'za.co.sabs.planningtool.mapper.ActivityMapper' but was actually of type 'jdk.proxy4.$Proxy169'
+2026-01-15T13:04:11.065+02:00  INFO 18685 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T13:04:11.069+02:00  INFO 18685 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-15T13:04:11.075+02:00  INFO 18685 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-15T13:04:11.077+02:00  INFO 18685 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-15T13:04:11.089+02:00  INFO 18685 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-15T13:04:11.099+02:00 ERROR 18685 --- [planningtool] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'activityMapper' could not be injected because it is a JDK dynamic proxy
+
+The bean is of type 'jdk.proxy4.$Proxy169' and implements:
+	java.util.function.Function
+	org.springframework.aop.SpringProxy
+	org.springframework.aop.framework.Advised
+	org.springframework.core.DecoratingProxy
+
+Expected a bean of type 'za.co.sabs.planningtool.mapper.ActivityMapper' which implements:
+	java.util.function.Function
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2026-01-15T13:37:51.257+02:00  INFO 19209 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 19209 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
+2026-01-15T13:37:51.261+02:00  INFO 19209 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
+2026-01-15T13:37:51.427+02:00  INFO 19209 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-15T13:37:51.428+02:00  INFO 19209 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-15T13:37:52.036+02:00  INFO 19209 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-15T13:37:52.082+02:00  INFO 19209 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 12 JPA repository interfaces.
+2026-01-15T13:37:52.865+02:00  INFO 19209 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-15T13:37:52.875+02:00  INFO 19209 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-15T13:37:52.875+02:00  INFO 19209 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-15T13:37:52.907+02:00  INFO 19209 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1479 ms
+2026-01-15T13:37:53.044+02:00  INFO 19209 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-15T13:37:53.083+02:00  INFO 19209 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-15T13:37:53.317+02:00  INFO 19209 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-15T13:37:53.336+02:00  INFO 19209 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-15T13:37:53.484+02:00  INFO 19209 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fb6555c
+2026-01-15T13:37:53.485+02:00  INFO 19209 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-15T13:37:53.549+02:00  WARN 19209 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-15T13:37:53.563+02:00  INFO 19209 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/planningtool?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: planningtool/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-15T13:37:54.303+02:00  INFO 19209 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-15T13:37:54.417+02:00  INFO 19209 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T13:37:54.520+02:00  INFO 19209 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-15T13:37:54.823+02:00  WARN 19209 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'activityController' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/controller/ActivityController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'activityProcessorImpl' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/processor/impl/ActivityProcessorImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'za.co.sabs.planningtool.mapper.ActivityMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-15T13:37:54.825+02:00  INFO 19209 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T13:37:54.832+02:00  INFO 19209 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-15T13:37:54.840+02:00  INFO 19209 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-15T13:37:54.844+02:00  INFO 19209 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-15T13:37:54.853+02:00  INFO 19209 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-15T13:37:54.882+02:00 ERROR 19209 --- [planningtool] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in za.co.sabs.planningtool.processor.impl.ActivityProcessorImpl required a bean of type 'za.co.sabs.planningtool.mapper.ActivityMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'za.co.sabs.planningtool.mapper.ActivityMapper' in your configuration.
+
+2026-01-15T13:39:35.915+02:00  INFO 19268 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 19268 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
+2026-01-15T13:39:35.918+02:00  INFO 19268 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
+2026-01-15T13:39:35.970+02:00  INFO 19268 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-15T13:39:35.970+02:00  INFO 19268 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-15T13:39:36.525+02:00  INFO 19268 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-15T13:39:36.573+02:00  INFO 19268 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 12 JPA repository interfaces.
+2026-01-15T13:39:37.079+02:00  INFO 19268 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-15T13:39:37.089+02:00  INFO 19268 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-15T13:39:37.089+02:00  INFO 19268 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-15T13:39:37.110+02:00  INFO 19268 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1140 ms
+2026-01-15T13:39:37.220+02:00  INFO 19268 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-15T13:39:37.254+02:00  INFO 19268 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-15T13:39:37.493+02:00  INFO 19268 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-15T13:39:37.512+02:00  INFO 19268 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-15T13:39:37.654+02:00  INFO 19268 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@dd0688f
+2026-01-15T13:39:37.656+02:00  INFO 19268 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-15T13:39:37.769+02:00  WARN 19268 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-15T13:39:37.781+02:00  INFO 19268 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/planningtool?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: planningtool/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-15T13:39:38.677+02:00  INFO 19268 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-15T13:39:38.835+02:00  INFO 19268 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T13:39:39.033+02:00  INFO 19268 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-15T13:39:39.239+02:00  WARN 19268 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'activityController' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/controller/ActivityController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'activityProcessorImpl' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/processor/impl/ActivityProcessorImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'java.util.function.Function<za.co.sabs.planningtool.entity.Activity, za.co.sabs.planningtool.dto.ActivityDto>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-15T13:39:39.240+02:00  INFO 19268 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T13:39:39.244+02:00  INFO 19268 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-15T13:39:39.252+02:00  INFO 19268 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-15T13:39:39.253+02:00  INFO 19268 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-15T13:39:39.260+02:00  INFO 19268 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-15T13:39:39.271+02:00 ERROR 19268 --- [planningtool] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in za.co.sabs.planningtool.processor.impl.ActivityProcessorImpl required a bean of type 'java.util.function.Function' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.util.function.Function' in your configuration.
+
+2026-01-15T13:43:09.119+02:00  INFO 19431 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : Starting PlanningtoolApplication using Java 17.0.12 with PID 19431 (/Users/apple/Documents/projects/planningtool/target/classes started by apple in /Users/apple/Documents/projects/planningtool)
+2026-01-15T13:43:09.123+02:00  INFO 19431 --- [planningtool] [restartedMain] z.c.s.p.PlanningtoolApplication          : The following 1 profile is active: "dev"
+2026-01-15T13:43:09.167+02:00  INFO 19431 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-15T13:43:09.167+02:00  INFO 19431 --- [planningtool] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-15T13:43:09.745+02:00  INFO 19431 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-15T13:43:09.793+02:00  INFO 19431 --- [planningtool] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 12 JPA repository interfaces.
+2026-01-15T13:43:10.271+02:00  INFO 19431 --- [planningtool] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-01-15T13:43:10.280+02:00  INFO 19431 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-15T13:43:10.280+02:00  INFO 19431 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-15T13:43:10.301+02:00  INFO 19431 --- [planningtool] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1133 ms
+2026-01-15T13:43:10.388+02:00  INFO 19431 --- [planningtool] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-15T13:43:10.421+02:00  INFO 19431 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-15T13:43:10.710+02:00  INFO 19431 --- [planningtool] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-15T13:43:10.728+02:00  INFO 19431 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-15T13:43:10.850+02:00  INFO 19431 --- [planningtool] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f929657
+2026-01-15T13:43:10.851+02:00  INFO 19431 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-15T13:43:10.908+02:00  WARN 19431 --- [planningtool] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-15T13:43:10.927+02:00  INFO 19431 --- [planningtool] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/planningtool?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: planningtool/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-15T13:43:11.679+02:00  INFO 19431 --- [planningtool] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-15T13:43:11.775+02:00  INFO 19431 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T13:43:11.819+02:00  INFO 19431 --- [planningtool] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-15T13:43:12.018+02:00  INFO 19431 --- [planningtool] [restartedMain] s.s.l.DefaultSpringSecurityContextSource : Configure with URL ldaps://SABS-AD-VDC1.SABS.co.za:636,ldap://SABS-AD-VDC1.SABS.co.za:389/DC%3DSABS%2CDC%3Dco%2CDC%3Dza and root DN /SABS-AD-VDC1.SABS.co.za:389/DC%3DSABS%2CDC%3Dco%2CDC%3Dza
+2026-01-15T13:43:12.020+02:00  WARN 19431 --- [planningtool] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/controller/AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authenticationManager' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'authenticationManager' parameter 0: Error creating bean with name 'ldapAuthProvider' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'ldapAuthProvider' parameter 0: Error creating bean with name 'contextSource' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.ldap.DefaultSpringSecurityContextSource]: Factory method 'contextSource' threw exception with message: Invalid name: /SABS-AD-VDC1.SABS.co.za:389/DC=SABS,DC=co,DC=za
+2026-01-15T13:43:12.020+02:00  INFO 19431 --- [planningtool] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-15T13:43:12.023+02:00  INFO 19431 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-15T13:43:12.028+02:00  INFO 19431 --- [planningtool] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-15T13:43:12.030+02:00  INFO 19431 --- [planningtool] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-15T13:43:12.037+02:00  INFO 19431 --- [planningtool] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-15T13:43:12.043+02:00 ERROR 19431 --- [planningtool] [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [/Users/apple/Documents/projects/planningtool/target/classes/za/co/sabs/planningtool/controller/AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authenticationManager' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'authenticationManager' parameter 0: Error creating bean with name 'ldapAuthProvider' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'ldapAuthProvider' parameter 0: Error creating bean with name 'contextSource' defined in class path resource [za/co/sabs/planningtool/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.ldap.DefaultSpringSecurityContextSource]: Factory method 'contextSource' threw exception with message: Invalid name: /SABS-AD-VDC1.SABS.co.za:389/DC=SABS,DC=co,DC=za
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
@@ -298,7 +558,7 @@ Caused by: org.springframework.ldap.InvalidNameException: Invalid name: /SABS-AD
 	at org.springframework.ldap.core.support.AbstractContextSource.setBase(AbstractContextSource.java:314) ~[spring-ldap-core-4.0.1.jar:4.0.1]
 	at org.springframework.security.ldap.DefaultSpringSecurityContextSource.<init>(DefaultSpringSecurityContextSource.java:81) ~[spring-security-ldap-7.0.2.jar:7.0.2]
 	at org.springframework.security.ldap.DefaultSpringSecurityContextSource.<init>(DefaultSpringSecurityContextSource.java:116) ~[spring-security-ldap-7.0.2.jar:7.0.2]
-	at za.co.sabs.planningtool.config.SecurityConfig.contextSource(SecurityConfig.java:36) ~[classes/:na]
+	at za.co.sabs.planningtool.config.SecurityConfig.contextSource(SecurityConfig.java:42) ~[classes/:na]
 	at za.co.sabs.planningtool.config.SecurityConfig$$SpringCGLIB$$0.CGLIB$contextSource$0(<generated>) ~[classes/:na]
 	at za.co.sabs.planningtool.config.SecurityConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-7.0.2.jar:7.0.2]
