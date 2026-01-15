@@ -81,15 +81,25 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/planningtool/auth/**",
+                        .requestMatchers( // application auth
+                                "/planningtool/auth/**",
+                                "/planningtool/auth/login",
+                                // swagger / springdoc (with and without context path)
+                                "/planningtool/v3/api-docs/**",
+                                "/planningtool/v3/api-docs.yaml",
+                                "/planningtool/swagger-ui/**",
+                                "/planningtool/swagger-ui.html",
+                                "/planningtool/swagger-ui/index.html",
+                                "/planningtool/swagger-resources/**",
+                                "/planningtool/webjars/**",
+
                                 "/v3/api-docs/**",
                                 "/v3/api-docs.yaml",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
+                                "/swagger-ui/index.html",
                                 "/swagger-resources/**",
-                                "/webjars/**",
-                                "/v2/api-docs",
-                                "/configuration/**").permitAll()
+                                "/webjars/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class)
