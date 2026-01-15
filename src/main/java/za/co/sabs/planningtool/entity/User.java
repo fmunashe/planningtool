@@ -1,7 +1,10 @@
 package za.co.sabs.planningtool.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,13 +14,13 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "users")
-public class User implements UserDetails {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@NoArgsConstructor
+@AllArgsConstructor
+public class User extends BaseEntity implements UserDetails {
 
     @Column(unique = true, nullable = false)
     private String username;
@@ -36,11 +39,9 @@ public class User implements UserDetails {
     private boolean credentialsNonExpired = true;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "user_roles",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
+    @JoinTable(name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -50,9 +51,14 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return this.authorities.stream()
-                .map(SimpleGrantedAuthority::new)
-                .collect(Collectors.toSet());
+        Set<GrantedAuthority> auths = new HashSet<>();
+        if (roles != null) {
+            auths.addAll(roles.stream().map(r -> new SimpleGrantedAuthority(r.getName())).collect(Collectors.toSet()));
+        }
+        if (authorities != null) {
+            auths.addAll(authorities.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toSet()));
+        }
+        return auths;
     }
 
     @Override

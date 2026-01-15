@@ -10,6 +10,6 @@ import java.util.function.Function;
 public class CustomerMapper implements Function<Customer, CustomerDto> {
     @Override
     public CustomerDto apply(Customer customer) {
-        return new CustomerDto(customer.getCustomerId(), customer.getName(), customer.getEmail(), customer.getPhoneNumber(), customer.getAccountNumber());
+        return new CustomerDto(customer.getId(), customer.getCustomerId(), customer.getName(), customer.getEmail(), customer.getPhoneNumber(), customer.getAccountNumber(), customer.getCreatedAt(), customer.getUpdatedAt());
     }
 }

@@ -3,6 +3,7 @@ package za.co.sabs.planningtool.utils.messages.response.helper;
 import org.springframework.data.domain.Page;
 import za.co.sabs.planningtool.utils.messages.response.basic.ApiResponse;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -33,10 +34,11 @@ public class HelperResponse {
     }
 
     public static <S, T> List<T> buildContent(Page<S> page, Function<S, T> mapper) {
-        return page.getContent()
-            .stream()
-            .map(mapper)
-            .collect(Collectors.toList());
+        return page != null && !page.getContent().isEmpty() ?
+                page.getContent()
+                        .stream()
+                        .map(mapper)
+                        .collect(Collectors.toList()) : Collections.emptyList();
     }
 
     public static <S, T> List<T> mappedDtoList(List<S> list, Function<S, T> mapper) {
