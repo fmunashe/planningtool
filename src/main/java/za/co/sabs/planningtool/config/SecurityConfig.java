@@ -1,5 +1,6 @@
 package za.co.sabs.planningtool.config;
 
+import jakarta.servlet.Filter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,6 +8,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -15,17 +17,21 @@ import org.springframework.security.ldap.authentication.BindAuthenticator;
 import org.springframework.security.ldap.authentication.LdapAuthenticationProvider;
 import org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator;
 import org.springframework.security.web.SecurityFilterChain;
+import za.co.sabs.planningtool.repository.UserRepository;
 import za.co.sabs.planningtool.service.security.JwtAuthenticationFilter;
+import za.co.sabs.planningtool.service.security.JwtTokenProvider;
 
 import java.util.List;
 
 @Configuration
 public class SecurityConfig {
 
-    private final JwtAuthenticationFilter jwtAuthFilter;
+    private final JwtTokenProvider tokenProvider;
+    private final UserRepository userRepository;
 
-    public SecurityConfig(JwtAuthenticationFilter jwtAuthFilter) {
-        this.jwtAuthFilter = jwtAuthFilter;
+    public SecurityConfig(JwtTokenProvider tokenProvider, UserRepository userRepository) {
+        this.tokenProvider = tokenProvider;
+        this.userRepository = userRepository;
     }
 
     @Bean
@@ -42,7 +48,7 @@ public class SecurityConfig {
     @Bean
     public AuthenticationProvider ldapAuthProvider(DefaultSpringSecurityContextSource contextSource) {
         BindAuthenticator bindAuthenticator = new BindAuthenticator(contextSource);
-        bindAuthenticator.setUserDnPatterns(new String[]{"uid={0},ou=people"}); // adapt to your LDAP layout
+        bindAuthenticator.setUserDnPatterns(new String[]{"uid={0},ou=people"});
 
         DefaultLdapAuthoritiesPopulator authoritiesPopulator =
                 new DefaultLdapAuthoritiesPopulator(contextSource, "ou=groups");
@@ -51,7 +57,6 @@ public class SecurityConfig {
         authoritiesPopulator.setRolePrefix("ROLE_");
 
         LdapAuthenticationProvider provider = new LdapAuthenticationProvider(bindAuthenticator, authoritiesPopulator);
-        // map LDAP roles directly
         var mapper = new SimpleAuthorityMapper();
         mapper.setConvertToUpperCase(true);
         provider.setAuthoritiesMapper(mapper);
@@ -70,13 +75,14 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        Filter jwtFilter = new JwtAuthenticationFilter(tokenProvider, userRepository);
         http
-                .csrf(csrf -> csrf.disable())
+                .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/planningtool/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
-                .addFilterBefore(jwtAuthFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(jwtFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement(sm -> sm.sessionCreationPolicy(org.springframework.security.config.http.SessionCreationPolicy.STATELESS));
         return http.build();
     }

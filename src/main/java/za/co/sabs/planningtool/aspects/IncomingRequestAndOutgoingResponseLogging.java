@@ -7,11 +7,14 @@
 //import org.aspectj.lang.annotation.Before;
 //import org.aspectj.lang.annotation.Pointcut;
 //import org.aspectj.lang.reflect.CodeSignature;
+//import org.springframework.core.Ordered;
+//import org.springframework.core.annotation.Order;
 //import org.springframework.stereotype.Component;
 //
 //@Component
 //@Slf4j
 //@Aspect
+//@Order(Ordered.LOWEST_PRECEDENCE)
 //public class IncomingRequestAndOutgoingResponseLogging {
 //    @Pointcut("execution(* za.co.sabs.planningtool.processor..*(..))")
 //    public void processorMethodsExecution() {

@@ -3,10 +3,13 @@
 //import org.aspectj.lang.JoinPoint;
 //import org.aspectj.lang.annotation.AfterThrowing;
 //import org.aspectj.lang.annotation.Aspect;
+//import org.springframework.core.Ordered;
+//import org.springframework.core.annotation.Order;
 //import org.springframework.stereotype.Component;
 //
 //@Aspect
 //@Component
+//@Order(Ordered.LOWEST_PRECEDENCE)
 //public class ErrorLoggingAspect {
 //    @AfterThrowing(pointcut = "execution(* za.co.sabs.planningtool.*..*(..))", throwing = "error")
 //    public void afterThrowingAdvice(JoinPoint jp, Throwable error) {
