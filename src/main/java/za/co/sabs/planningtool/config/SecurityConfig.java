@@ -50,18 +50,29 @@ public class SecurityConfig {
     @Bean
     public AuthenticationProvider ldapAuthProvider(DefaultSpringSecurityContextSource contextSource) {
         BindAuthenticator bindAuthenticator = new BindAuthenticator(contextSource);
-        bindAuthenticator.setUserDnPatterns(new String[]{"uid={0},ou=people"});
+        bindAuthenticator.setUserSearch(new org.springframework.security.ldap.search.FilterBasedLdapUserSearch(
+                "", // search base relative to your LDAP base DN
+                "(sAMAccountName={0})",
+                contextSource
+        ));
 
         DefaultLdapAuthoritiesPopulator authoritiesPopulator =
-                new DefaultLdapAuthoritiesPopulator(contextSource, "ou=groups");
+                new DefaultLdapAuthoritiesPopulator(
+                        contextSource,
+                        null
+                );
+
         authoritiesPopulator.setGroupRoleAttribute("cn");
         authoritiesPopulator.setGroupSearchFilter("(member={0})");
         authoritiesPopulator.setRolePrefix("ROLE_");
 
-        LdapAuthenticationProvider provider = new LdapAuthenticationProvider(bindAuthenticator, authoritiesPopulator);
-        var mapper = new SimpleAuthorityMapper();
+        LdapAuthenticationProvider provider =
+                new LdapAuthenticationProvider(bindAuthenticator, authoritiesPopulator);
+
+        SimpleAuthorityMapper mapper = new SimpleAuthorityMapper();
         mapper.setConvertToUpperCase(true);
         provider.setAuthoritiesMapper(mapper);
+
         return provider;
     }
 
@@ -81,10 +92,8 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers( // application auth
-                                "/planningtool/auth/**",
-                                "/planningtool/auth/login",
-                                // swagger / springdoc (with and without context path)
+                        .requestMatchers(
+                                "/auth/**",
                                 "/planningtool/v3/api-docs/**",
                                 "/planningtool/v3/api-docs.yaml",
                                 "/planningtool/swagger-ui/**",
