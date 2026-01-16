@@ -16,8 +16,10 @@ import za.co.sabs.planningtool.utils.messages.response.helper.HelperResponse;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.Base64;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class AuthenticationProcessorImpl implements AuthenticationProcessor {
@@ -42,37 +44,40 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
         var authorities = auth.getAuthorities();
         String token = jwtTokenProvider.generateToken(username, authorities);
 
-        Instant expiresInstant = extractExpiryFromJwt(token).orElse(Instant.now());
-        Duration timeToExpiry = Duration.between(Instant.now(), expiresInstant);
-        if (timeToExpiry.isNegative()) {
-            timeToExpiry = Duration.ZERO;
-        }
+        Optional<Long> remainingMinutes= extractExpiryInMinutesFromJwt(token);
 
         AuthResponse response =  AuthResponse.builder()
                 .token(token)
-                .expiresAt(timeToExpiry)
+                .minutesToExpire(remainingMinutes.get())
+                .expiresAt(LocalDateTime.now().plusMinutes(remainingMinutes.get()))
                 .build();
 
         return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, response);
     }
 
-    private java.util.Optional<Instant> extractExpiryFromJwt(String jwt) {
+    private Optional<Long> extractExpiryInMinutesFromJwt(String jwt) {
         try {
             String[] parts = jwt.split("\\.");
-            if (parts.length < 2) return java.util.Optional.empty();
+            if (parts.length < 2) return Optional.empty();
             String payloadJson = new String(Base64.getUrlDecoder().decode(parts[1]));
             Map<String, Object> claims = objectMapper.readValue(payloadJson, Map.class);
             Object expObj = claims.get("exp");
-            if (expObj == null) return java.util.Optional.empty();
+            if (expObj == null) return Optional.empty();
+
             long expSeconds;
             if (expObj instanceof Number) {
                 expSeconds = ((Number) expObj).longValue();
             } else {
                 expSeconds = Long.parseLong(expObj.toString());
             }
-            return java.util.Optional.of(Instant.ofEpochSecond(expSeconds));
+
+            long currentSeconds = Instant.now().getEpochSecond();
+            long remainingSeconds = expSeconds - currentSeconds;
+            long remainingMinutes = Math.max(0, remainingSeconds / 60); // Convert to minutes and ensure non-negative
+
+            return Optional.of(remainingMinutes);
         } catch (Exception e) {
-            return java.util.Optional.empty();
+            return Optional.empty();
         }
     }
 }

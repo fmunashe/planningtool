@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.Duration;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -13,5 +13,6 @@ import java.time.Duration;
 @AllArgsConstructor
 public class AuthResponse {
     private String token;
-    private Duration expiresAt;
+    private LocalDateTime expiresAt;
+    private Long minutesToExpire;
 }
