@@ -1,9 +1,11 @@
 package za.co.sabs.planningtool.controller;
 
+import org.jspecify.annotations.NonNull;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import za.co.sabs.planningtool.processor.AuthenticationProcessor;
 import za.co.sabs.planningtool.utils.messages.request.AuthRequest;
+import za.co.sabs.planningtool.utils.messages.request.AuthResponse;
 import za.co.sabs.planningtool.utils.messages.response.basic.ApiResponse;
 
 @RestController
@@ -17,8 +19,8 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody AuthRequest request) {
-        ApiResponse<String> response = authenticationProcessor.authenticate(request);
+    public ResponseEntity<@NonNull ApiResponse<AuthResponse>> login(@RequestBody AuthRequest request) {
+        ApiResponse<AuthResponse> response = authenticationProcessor.authenticate(request);
         return ResponseEntity.ok(response);
     }
 }
