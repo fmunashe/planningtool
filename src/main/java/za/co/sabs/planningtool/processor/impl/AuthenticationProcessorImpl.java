@@ -66,7 +66,7 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
                     auth.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList())
             );
             // optional: log full object as json (be careful with credentials)
-             log.debug("== Authentication (full) == : {}", objectMapper.writeValueAsString(auth));
+             log.info("== Authentication (full) == : {}", objectMapper.writeValueAsString(auth));
         } catch (Exception ignored) { }
 
         var principal = auth.getPrincipal();
@@ -146,7 +146,7 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
                 userRepository.save(newUser);
             });
         } catch (Exception e) {
-            log.debug("=== syncLocalUser failed for === {}: {}", username, e.getMessage());
+            log.info("=== syncLocalUser failed for === {}: {}", username, e.getMessage());
         }
     }
 
@@ -169,10 +169,19 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
                     .where("sAMAccountName").is(username)
                     .or("userPrincipalName").is(username);
 
+            // Configure to ignore referrals
+            ldapTemplate.setIgnorePartialResultException(true);
+            ldapTemplate.setIgnoreNameNotFoundException(true);
+
             List<Map<String, String>> results = ldapTemplate.search(q, (AttributesMapper<Map<String, String>>) attrs -> {
                 Map<String, String> map = new HashMap<>();
                 try {
-                    // Try to get from attributes first
+                    // Get the DN first
+                    String dn = attrs.get("distinguishedName") != null ?
+                            attrs.get("distinguishedName").get().toString() :
+                            attrs.get("dn").toString();
+
+                    // Add basic attributes
                     putIfPresent(attrs, "mail", map);
                     putIfPresent(attrs, "displayName", map);
                     putIfPresent(attrs, "givenName", map);
@@ -180,25 +189,31 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
                     putIfPresent(attrs, "sAMAccountName", map);
                     putIfPresent(attrs, "userPrincipalName", map);
 
-                    // If we don't have first/last name, try to extract from DN
-                    if ((!map.containsKey("givenName") || !map.containsKey("sn")) && attrs.get("distinguishedName") != null) {
-                        String dn = attrs.get("distinguishedName").get().toString();
+                    // Extract from DN if needed
+                    if ((!map.containsKey("givenName") || !map.containsKey("sn")) && dn != null) {
                         extractNamesFromDN(dn, map);
                     }
-                } catch (NamingException ignored) {}
-                return map;
+
+                    return map;
+                } catch (Exception e) {
+                    log.debug("Error processing attributes for {}: {}", username, e.getMessage());
+                    return map;
+                }
             });
 
             return results.isEmpty() ? Collections.emptyMap() : results.get(0);
         } catch (Exception e) {
             log.debug("Failed to read AD attributes for {}: {}", username, e.getMessage());
-            return Collections.emptyMap();
+            // Fallback to just using the username if we can't get attributes
+            Map<String, String> fallback = new HashMap<>();
+            fallback.put("sAMAccountName", username);
+            return fallback;
         }
     }
 
     private void extractNamesFromDN(String dn, Map<String, String> map) {
         try {
-            // DN format: "CN=Farai Zihove,OU=Contractors,OU=SABS Users,DC=SABS,DC=co,DC=za"
+            log.info("=== dn is === {} ",objectMapper.writeValueAsString(dn));
             if (dn.startsWith("CN=")) {
                 String cn = dn.substring(3, dn.indexOf(','));
                 String[] names = cn.split("\\s+", 2); // Split on first space
@@ -213,7 +228,7 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
                 }
             }
         } catch (Exception e) {
-            log.debug("Failed to extract names from DN: {}", dn, e);
+            log.info(" === Failed to extract names from DN: === {}", dn, e);
         }
     }
 
