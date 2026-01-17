@@ -172,12 +172,19 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
             List<Map<String, String>> results = ldapTemplate.search(q, (AttributesMapper<Map<String, String>>) attrs -> {
                 Map<String, String> map = new HashMap<>();
                 try {
+                    // Try to get from attributes first
                     putIfPresent(attrs, "mail", map);
                     putIfPresent(attrs, "displayName", map);
                     putIfPresent(attrs, "givenName", map);
                     putIfPresent(attrs, "sn", map);
                     putIfPresent(attrs, "sAMAccountName", map);
                     putIfPresent(attrs, "userPrincipalName", map);
+
+                    // If we don't have first/last name, try to extract from DN
+                    if ((!map.containsKey("givenName") || !map.containsKey("sn")) && attrs.get("distinguishedName") != null) {
+                        String dn = attrs.get("distinguishedName").get().toString();
+                        extractNamesFromDN(dn, map);
+                    }
                 } catch (NamingException ignored) {}
                 return map;
             });
@@ -186,6 +193,27 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
         } catch (Exception e) {
             log.debug("Failed to read AD attributes for {}: {}", username, e.getMessage());
             return Collections.emptyMap();
+        }
+    }
+
+    private void extractNamesFromDN(String dn, Map<String, String> map) {
+        try {
+            // DN format: "CN=Farai Zihove,OU=Contractors,OU=SABS Users,DC=SABS,DC=co,DC=za"
+            if (dn.startsWith("CN=")) {
+                String cn = dn.substring(3, dn.indexOf(','));
+                String[] names = cn.split("\\s+", 2); // Split on first space
+                if (names.length >= 1 && !map.containsKey("givenName")) {
+                    map.put("givenName", names[0]); // First name
+                }
+                if (names.length > 1 && !map.containsKey("sn")) {
+                    map.put("sn", names[1]); // Last name
+                } else if (names.length == 1 && !map.containsKey("sn")) {
+                    // If only one name, use it as last name
+                    map.put("sn", names[0]);
+                }
+            }
+        } catch (Exception e) {
+            log.debug("Failed to extract names from DN: {}", dn, e);
         }
     }
 
