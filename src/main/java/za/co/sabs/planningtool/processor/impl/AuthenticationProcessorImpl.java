@@ -66,7 +66,7 @@ public class AuthenticationProcessorImpl implements AuthenticationProcessor {
                     auth.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList())
             );
             // optional: log full object as json (be careful with credentials)
-            // log.debug("Authentication (full): {}", objectMapper.writeValueAsString(auth));
+             log.debug("== Authentication (full) == : {}", objectMapper.writeValueAsString(auth));
         } catch (Exception ignored) { }
 
         var principal = auth.getPrincipal();

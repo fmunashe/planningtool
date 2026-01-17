@@ -20,7 +20,7 @@ public class DataInitializer {
 
     @PostConstruct
     public void ensureRoles() {
-        List<String> roles = List.of("ROLE_ADMIN", "ROLE_TEAM_LEAD", "ROLE_TEST_OFFICER");
+        List<String> roles = List.of("ROLE_USER","ROLE_ADMIN", "ROLE_TEAM_LEAD", "ROLE_TEST_OFFICER");
         for (String r : roles) {
             roleRepository.findByName(r).orElseGet(() -> {
                 log.info("=== Creating role === {}", r);
