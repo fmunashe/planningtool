@@ -1,5 +1,6 @@
 package za.co.sabs.planningtool.processor.impl;
 
+import jakarta.transaction.Transactional;
 import org.jspecify.annotations.NonNull;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import za.co.sabs.planningtool.entity.User;
 import za.co.sabs.planningtool.exceptions.RecordNotFoundException;
 import za.co.sabs.planningtool.mapper.UserMapper;
 import za.co.sabs.planningtool.processor.UserProcessor;
+import za.co.sabs.planningtool.service.RoleService;
 import za.co.sabs.planningtool.service.UserService;
 import za.co.sabs.planningtool.utils.AppConstants;
 import za.co.sabs.planningtool.utils.messages.request.UserRequest;
@@ -16,25 +18,35 @@ import za.co.sabs.planningtool.utils.messages.response.basic.ApiResponse;
 import za.co.sabs.planningtool.utils.messages.response.helper.HelperResponse;
 
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class UserProcessorImpl implements UserProcessor {
     private final UserService userService;
     private final UserMapper userMapper;
+    private final RoleService roleService;
 
-    public UserProcessorImpl(UserService userService, UserMapper userMapper) {
+    public UserProcessorImpl(UserService userService, UserMapper userMapper, RoleService roleService) {
         this.userService = userService;
         this.userMapper = userMapper;
+        this.roleService = roleService;
     }
 
     @Override
+    @Transactional
     public ApiResponse<UserDto> assignRoles(UserRequest userRequest) {
         Optional<User> optionalUser = userService.findByUsername(userRequest.getUsername());
         if (optionalUser.isEmpty()) {
             throw new RecordNotFoundException("User not found with username: " + userRequest.getUsername());
         }
         User user = optionalUser.get();
-        user.getRoles().addAll(userRequest.getRoles().stream().map(Role::new).toList());
+        Set<Role> rolesToAdd = userRequest.getRoles().stream()
+                .map(roleName -> roleService.findByName(roleName)
+                        .orElseGet(() -> roleService.save(new Role(roleName)))
+                )
+                .collect(Collectors.toSet());
+        user.getRoles().addAll(rolesToAdd);
         user = userService.save(user);
         return HelperResponse.buildApiResponse(null, userMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, userMapper.apply(user));
     }
