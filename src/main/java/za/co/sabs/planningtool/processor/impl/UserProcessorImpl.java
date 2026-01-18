@@ -64,7 +64,7 @@ public class UserProcessorImpl implements UserProcessor {
             throw new RecordNotFoundException("User not found with id: " + id);
         }
 
-        return HelperResponse.buildApiResponse(null, userMapper, true, 200, true, AppConstants.SUCCESS_MESSAGE, userMapper.apply(optionalUser.get()));
+        return HelperResponse.buildApiResponse(null, userMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, userMapper.apply(optionalUser.get()));
     }
 
     @Override
@@ -84,6 +84,6 @@ public class UserProcessorImpl implements UserProcessor {
             throw new RecordNotFoundException("User not found with id: " + id);
         }
         userService.deleteById(id);
-        return HelperResponse.buildApiResponse(null, userMapper, true, 200, true, AppConstants.SUCCESS_MESSAGE, userMapper.apply(optionalUser.get()));
+        return HelperResponse.buildApiResponse(null, userMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, userMapper.apply(optionalUser.get()));
     }
 }
