@@ -1,6 +1,7 @@
 package za.co.sabs.planningtool.dto;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 public record UserDto(
         Long id,
@@ -12,6 +13,7 @@ public record UserDto(
         boolean accountNonExpired,
         boolean accountNonLocked,
         boolean credentialsNonExpired,
+        Set<RoleDto> roles,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 ) {
