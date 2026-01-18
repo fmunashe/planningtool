@@ -4,6 +4,7 @@ import org.jspecify.annotations.NonNull;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import za.co.sabs.planningtool.dto.UserDto;
+import za.co.sabs.planningtool.entity.Role;
 import za.co.sabs.planningtool.entity.User;
 import za.co.sabs.planningtool.exceptions.RecordNotFoundException;
 import za.co.sabs.planningtool.mapper.UserMapper;
@@ -28,7 +29,14 @@ public class UserProcessorImpl implements UserProcessor {
 
     @Override
     public ApiResponse<UserDto> assignRoles(UserRequest userRequest) {
-        return null;
+        Optional<User> optionalUser = userService.findByUsername(userRequest.getUsername());
+        if (optionalUser.isEmpty()) {
+            throw new RecordNotFoundException("User not found with username: " + userRequest.getUsername());
+        }
+        User user = optionalUser.get();
+        user.getRoles().addAll(userRequest.getRoles().stream().map(Role::new).toList());
+        user = userService.save(user);
+        return HelperResponse.buildApiResponse(null, userMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, userMapper.apply(user));
     }
 
     @Override
