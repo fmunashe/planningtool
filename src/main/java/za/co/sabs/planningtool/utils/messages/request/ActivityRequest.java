@@ -12,6 +12,13 @@ import java.util.List;
 @NoArgsConstructor
 public class ActivityRequest {
     private String testMethodName;
+    private String testMethodNo;
+    private String phase;
+    private String description;
+    private String isoSansCode;
+    private String turnAroundTime;
+    private String createdBy;
+    private Boolean Active;
     private String testMethodDescription;
     private String project;
     private String testName;

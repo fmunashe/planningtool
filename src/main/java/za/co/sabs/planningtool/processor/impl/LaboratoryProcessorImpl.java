@@ -51,6 +51,8 @@ public class LaboratoryProcessorImpl implements LaboratoryProcessor {
         Laboratory lab = new Laboratory();
         lab.setLabName(labRequest.getLabName());
         lab.setLabNumber(labRequest.getLabNumber());
+        lab.setIsActive(labRequest.getIsActive());
+        lab.setCreatedBy(labRequest.getCreatedBy());
         lab = labService.save(lab);
         return HelperResponse.buildApiResponse(null, null, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(lab));
     }

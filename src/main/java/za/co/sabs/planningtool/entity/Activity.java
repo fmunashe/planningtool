@@ -29,7 +29,7 @@ public class Activity extends BaseEntity {
     private String testLocation;
     private String purposeOfTest;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "testing_method_id", nullable = false)
     private TestingMethod testingMethod;
 
@@ -38,7 +38,7 @@ public class Activity extends BaseEntity {
             mappedBy = "activity",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JsonManagedReference("activity-parameters")
     private List<Parameter> testParameters = new ArrayList<>();
@@ -48,28 +48,8 @@ public class Activity extends BaseEntity {
             mappedBy = "activity",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JsonManagedReference("activity-materials")
     private List<Material> materials = new ArrayList<>();
-
-    public void addMaterial(Material material) {
-        materials.add(material);
-        material.setActivity(this);
-    }
-
-    public void removeMaterial(Material material) {
-        materials.remove(material);
-        material.setActivity(null);
-    }
-
-    public void addParameter(Parameter parameter) {
-        testParameters.add(parameter);
-        parameter.setActivity(this);
-    }
-
-    public void removeParameter(Parameter parameter) {
-        testParameters.remove(parameter);
-        parameter.setActivity(null);
-    }
 }

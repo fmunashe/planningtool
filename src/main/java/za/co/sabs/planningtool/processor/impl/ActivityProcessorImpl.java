@@ -11,6 +11,7 @@ import za.co.sabs.planningtool.entity.Parameter;
 import za.co.sabs.planningtool.entity.TestingMethod;
 import za.co.sabs.planningtool.exceptions.RecordNotFoundException;
 import za.co.sabs.planningtool.mapper.ActivityMapper;
+import za.co.sabs.planningtool.mapper.TestingMethodMapper;
 import za.co.sabs.planningtool.processor.ActivityProcessor;
 import za.co.sabs.planningtool.service.ActivityService;
 import za.co.sabs.planningtool.service.MaterialService;
@@ -34,7 +35,7 @@ public class ActivityProcessorImpl implements ActivityProcessor {
     private final MaterialService materialService;
     private final ParameterService parameterService;
 
-    public ActivityProcessorImpl(ActivityService activityService, ActivityMapper activityMapper, TestMethodService methodService, MaterialService materialService, ParameterService parameterService) {
+    public ActivityProcessorImpl(ActivityService activityService, ActivityMapper activityMapper, TestMethodService methodService, MaterialService materialService, ParameterService parameterService, TestingMethodMapper testMethodMapper) {
         this.activityService = activityService;
         this.mapper = activityMapper;
         this.methodService = methodService;
@@ -46,7 +47,7 @@ public class ActivityProcessorImpl implements ActivityProcessor {
     @Override
     public ApiResponse<ActivityDto> findAll(Integer pageNo, Integer pageSize) {
         Page<@NonNull Activity> activities = activityService.findAll(pageNo, pageSize);
-        return HelperResponse.buildApiResponse(activities, null, true, 200, true, AppConstants.LIST_MESSAGE, null);
+        return HelperResponse.buildApiResponse(activities, mapper, true, 200, true, AppConstants.LIST_MESSAGE, null);
 
     }
 
@@ -63,8 +64,14 @@ public class ActivityProcessorImpl implements ActivityProcessor {
         TestingMethod method = methodService.findByName(activityRequest.getTestMethodName())
                 .orElseGet(() -> {
                     TestingMethod newMethod = new TestingMethod();
-                    newMethod.setName(activityRequest.getTestMethodName());
+                    newMethod.setTestMethodName(activityRequest.getTestMethodName());
                     newMethod.setDescription(activityRequest.getTestMethodDescription());
+                    newMethod.setIsoSansCode(activityRequest.getIsoSansCode());
+                    newMethod.setTurnAroundTime(activityRequest.getTurnAroundTime());
+                    newMethod.setActive(activityRequest.getActive());
+                    newMethod.setPhase(activityRequest.getPhase());
+                    newMethod.setTestMethodNo(activityRequest.getTestMethodNo());
+                    newMethod.setCreatedBy(activityRequest.getCreatedBy());
                     return methodService.save(newMethod);
                 });
 
@@ -90,7 +97,7 @@ public class ActivityProcessorImpl implements ActivityProcessor {
         activity.setTestParameters(parameters);
         activity = activityService.save(activity);
 
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(activity));
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(activity));
 
     }
 
@@ -114,7 +121,7 @@ public class ActivityProcessorImpl implements ActivityProcessor {
         activity.setTestParameters(activityDto.parameters());
 
         activity = activityService.save(activity);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(activity));
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(activity));
 
     }
 

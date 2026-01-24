@@ -11,4 +11,6 @@ public class LabRequest {
     private String labName;
     @NotBlank(message = "Lab number is required")
     private String labNumber;
+    private Boolean isActive;
+    private String createdBy;
 }

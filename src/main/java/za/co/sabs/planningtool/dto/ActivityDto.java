@@ -19,6 +19,7 @@ public record ActivityDto(
         String testLocation,
         String purposeOfTest,
         String conductedBy,
+        TestingMethodDto testingMethod,
         @JsonIgnoreProperties({"materials"})
         List<Material> materials,
         @JsonIgnoreProperties({"parameters"})

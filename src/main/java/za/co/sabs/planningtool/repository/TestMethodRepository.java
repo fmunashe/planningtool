@@ -9,5 +9,5 @@ import java.util.Optional;
 
 @Repository
 public interface TestMethodRepository extends JpaRepository<@NonNull TestingMethod, @NonNull Long> {
-    Optional<TestingMethod> findByName(String name);
+    Optional<TestingMethod> findByTestMethodName(String name);
 }

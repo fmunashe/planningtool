@@ -37,7 +37,7 @@ public class TestMethodServiceImpl implements TestMethodService {
 
     @Override
     public Optional<TestingMethod> findByName(String name) {
-        return testMethodRepository.findByName(name);
+        return testMethodRepository.findByTestMethodName(name);
     }
 
     @Override
