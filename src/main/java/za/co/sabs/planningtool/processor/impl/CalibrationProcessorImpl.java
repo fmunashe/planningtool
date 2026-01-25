@@ -43,7 +43,7 @@ public class CalibrationProcessorImpl implements CalibrationProcessor {
         if (calibrationOptional.isEmpty()) {
             throw new RecordNotFoundException("Calibration not found");
         }
-        return HelperResponse.buildApiResponse(null, calibrationMapper, true, 200, true, AppConstants.SUCCESS_MESSAGE, calibrationMapper.apply(calibrationOptional.get()));
+        return HelperResponse.buildApiResponse(null, calibrationMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, calibrationMapper.apply(calibrationOptional.get()));
     }
 
     @Override
@@ -65,7 +65,7 @@ public class CalibrationProcessorImpl implements CalibrationProcessor {
         calibration.setReturnDate(calibrationRequest.getReturnDate());
         calibration.setCreatedBy(calibrationRequest.getCreatedBy());
         calibration = calibrationService.save(calibration);
-        return HelperResponse.buildApiResponse(null, calibrationMapper, true, 200, true, AppConstants.SUCCESS_MESSAGE, calibrationMapper.apply(calibration));
+        return HelperResponse.buildApiResponse(null, calibrationMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, calibrationMapper.apply(calibration));
     }
 
     @Override
@@ -95,7 +95,7 @@ public class CalibrationProcessorImpl implements CalibrationProcessor {
         if (calibrationOptional.isEmpty()) {
             throw new RecordNotFoundException("Calibration not found");
         }
-        return HelperResponse.buildApiResponse(null, calibrationMapper, true, 200, true, AppConstants.SUCCESS_MESSAGE, calibrationMapper.apply(calibrationOptional.get()));
+        return HelperResponse.buildApiResponse(null, calibrationMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, calibrationMapper.apply(calibrationOptional.get()));
     }
 
 
