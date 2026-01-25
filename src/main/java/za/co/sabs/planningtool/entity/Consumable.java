@@ -1,15 +1,13 @@
 package za.co.sabs.planningtool.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -28,10 +26,9 @@ public class Consumable extends BaseEntity {
     private Double cost;
     private String createdBy;
     private Boolean active;
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "contact_person_id")
+    @OneToMany(mappedBy = "consumable", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference("consumable-contact-person")
-    private ContactPerson supplier;
+    private List<ContactPerson> contactPersons = new ArrayList<>();
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "consumable_id")
     @JsonManagedReference("consumable-job-cards")

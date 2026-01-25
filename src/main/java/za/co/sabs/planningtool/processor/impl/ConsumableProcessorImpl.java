@@ -16,6 +16,7 @@ import za.co.sabs.planningtool.utils.messages.request.ConsumableRequest;
 import za.co.sabs.planningtool.utils.messages.response.basic.ApiResponse;
 import za.co.sabs.planningtool.utils.messages.response.helper.HelperResponse;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -57,7 +58,7 @@ public class ConsumableProcessorImpl implements ConsumableProcessor {
         consumable.setConsumableNumber(consumableRequest.getConsumableNumber());
         consumable.setQuantityOnHand(consumableRequest.getQuantityOnHand());
         consumable.setReplenLevel(consumableRequest.getReplenLevel());
-        consumable.setSupplier(contactPerson);
+        consumable.setContactPersons(List.of(contactPerson));
         consumable.setType(consumableRequest.getType());
         consumable.setLocation(consumableRequest.getLocation());
         consumable.setDescription(consumableRequest.getDescription());
@@ -80,7 +81,7 @@ public class ConsumableProcessorImpl implements ConsumableProcessor {
         consumable.setConsumableNumber(consumableDto.consumableNumber());
         consumable.setQuantityOnHand(consumableDto.quantityOnHand());
         consumable.setReplenLevel(consumableDto.replenLevel());
-        consumable.setSupplier(consumableDto.supplier());
+        consumable.setContactPersons(List.of(consumableDto.supplier()));
         consumable.setType(consumableDto.type());
         consumable.setLocation(consumableDto.location());
         consumable.setDescription(consumableDto.description());

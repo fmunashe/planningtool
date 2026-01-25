@@ -23,7 +23,7 @@ public class ConsumableMapper implements Function<Consumable, ConsumableDto> {
                 consumable.getCost(),
                 consumable.getCreatedBy(),
                 consumable.getActive(),
-                getContactPerson(consumable.getSupplier()),
+                getContactPerson(consumable.getContactPersons().get(0)),
                 consumable.getCreatedAt(),
                 consumable.getUpdatedAt()
         );

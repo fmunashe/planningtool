@@ -11,6 +11,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -40,7 +41,7 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
-    private List<Warranty> warranties;
+    private List<Warranty> warranties = new ArrayList<>();
 
     @OneToMany(
             mappedBy = "equipment",
@@ -48,7 +49,7 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
-    private List<MaintenanceCycle> maintenanceCycles;
+    private List<MaintenanceCycle> maintenanceCycles = new ArrayList<>();
 
     @OneToMany(
             mappedBy = "equipment",
@@ -56,14 +57,14 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
-    private List<Claim> claims;
+    private List<Claim> claims = new ArrayList<>();
     @OneToMany(
             mappedBy = "equipment",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
-    private List<Calibration> calibrations;
+    private List<Calibration> calibrations = new ArrayList<>();
 
     @OneToMany(
             mappedBy = "equipment",
@@ -71,7 +72,7 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
-    private List<JobCard> jobCards;
+    private List<JobCard> jobCards = new ArrayList<>();
 
     @OneToMany(
             mappedBy = "equipment",
@@ -79,5 +80,5 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
-    private ReviewCycle reviewCycle;
+    private List<ReviewCycle> reviewCycles = new ArrayList<>();
 }

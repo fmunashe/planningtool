@@ -5,20 +5,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-public class JobCard extends BaseEntity {
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "testing_method_id", nullable = false)
-    private TestingMethod testingMethod;
-
+public class MaintenanceCycle extends BaseEntity {
+    private String maintenanceCycleNumber;
+    private String maintenanceCycleType;
+    private String frequency;
+    private LocalDate plannedDate;
+    private LocalDate returnDate;
+    private String createdBy;
+    private Boolean active;
+    private String supplier;
+    private String description;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "equipment_id", nullable = false)
     @JsonBackReference("equipment-maintenance-cycles")

@@ -12,21 +12,23 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ContactPerson extends BaseEntity {
+@Entity
+public class ReviewCycle extends BaseEntity {
     private String name;
-    private String email;
-    private String telephone;
-    private String address;
-    private Boolean active;
-    private LocalDate contractStartDate;
-    private LocalDate contractEndDate;
+    private String description;
+    private String warrantNumber;
+    private String warrantType;
+    private LocalDate coverageStartDate;
+    private LocalDate coverageEndDate;
+    private String createdBy;
+    private boolean active;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "consumable_id", nullable = false)
-    @JsonBackReference("consumable-contact-person")
-    private Consumable consumable;
+    @JoinColumn(name = "equipment_id", nullable = false)
+    @JsonBackReference("equipment-review-cycles")
+    private Equipment equipment;
 }
