@@ -9,6 +9,7 @@ import za.co.sabs.planningtool.entity.Claim;
 import za.co.sabs.planningtool.entity.Equipment;
 import za.co.sabs.planningtool.exceptions.RecordNotFoundException;
 import za.co.sabs.planningtool.mapper.ClaimMapper;
+import za.co.sabs.planningtool.mapper.EquipmentMapper;
 import za.co.sabs.planningtool.processor.ClaimProcessor;
 import za.co.sabs.planningtool.service.ClaimService;
 import za.co.sabs.planningtool.service.EquipmentService;
@@ -24,11 +25,13 @@ public class ClaimProcessorImpl implements ClaimProcessor {
     private final ClaimService claimService;
     private final ClaimMapper claimMapper;
     private final EquipmentService equipmentService;
+    private final EquipmentMapper equipmentMapper;
 
-    public ClaimProcessorImpl(ClaimService claimService, ClaimMapper claimMapper, EquipmentService equipmentService) {
+    public ClaimProcessorImpl(ClaimService claimService, ClaimMapper claimMapper, EquipmentService equipmentService, EquipmentMapper equipmentMapper) {
         this.claimService = claimService;
         this.claimMapper = claimMapper;
         this.equipmentService = equipmentService;
+        this.equipmentMapper = equipmentMapper;
     }
 
     @Override
@@ -88,7 +91,7 @@ public class ClaimProcessorImpl implements ClaimProcessor {
         claim.setCreatedBy(claimDto.createdBy());
         claim.setDocument(claimDto.document());
         claim.setPerson(claimDto.person());
-        claim.setEquipment(getEquipment(claimDto));
+        claim.setEquipment(equipmentMapper.toEntity(claimDto.equipment()));
         claim = claimService.save(claim);
         return HelperResponse.buildApiResponse(null, claimMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, claimMapper.apply(claim));
     }
@@ -101,26 +104,5 @@ public class ClaimProcessorImpl implements ClaimProcessor {
         }
         claimService.deleteById(id);
         return HelperResponse.buildApiResponse(null, claimMapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, claimMapper.apply(optionalClaim.get()));
-    }
-
-    private Equipment getEquipment(ClaimDto claimDto) {
-        EquipmentDto equipment = claimDto.equipment();
-        Equipment equipmentEntity = equipmentService.findById(equipment.id()).get();
-        equipmentEntity.setEquipmentNumber(equipment.equipmentNumber());
-        equipmentEntity.setName(equipment.name());
-        equipmentEntity.setSerialNumber(equipment.serialNumber());
-        equipmentEntity.setLocation(equipment.location());
-        equipmentEntity.setModelNumber(equipment.modelNumber());
-        equipmentEntity.setModelName(equipment.modelName());
-        equipmentEntity.setCost(equipment.cost());
-        equipmentEntity.setDescription(equipment.description());
-        equipmentEntity.setCreatedBy(equipment.createdBy());
-        equipmentEntity.setActive(equipment.active());
-        equipmentEntity.setManufacturer(equipment.manufacturer());
-        equipmentEntity.setSupplier(equipment.supplier());
-        equipmentEntity.setInstallationDate(equipment.installationDate());
-        equipmentEntity.setPurchaseDate(equipment.purchaseDate());
-        equipmentEntity.setExpirationDate(equipment.expirationDate());
-        return equipmentEntity;
     }
 }

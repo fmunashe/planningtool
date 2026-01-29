@@ -38,4 +38,18 @@ public class UserMapper implements Function<User, UserDto> {
     private Set<RoleDto> mapRoles(Set<Role> roles) {
         return roles.stream().map(roleMapper).collect(Collectors.toSet());
     }
+
+    public User toEntity(UserDto userDto) {
+        if (userDto == null) return null;
+        User user = new User();
+        user.setId(userDto.id());
+        user.setUsername(userDto.username());
+        user.setFirstName(userDto.firstName());
+        user.setLastName(userDto.lastName());
+        user.setEmail(user.getEmail());
+        user.setEnabled(userDto.enabled());
+        user.setAccountNonExpired(userDto.accountNonExpired());
+        user.setAccountNonLocked(user.isAccountNonExpired());
+        return user;
+    }
 }
