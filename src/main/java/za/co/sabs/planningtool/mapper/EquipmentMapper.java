@@ -1,6 +1,7 @@
 package za.co.sabs.planningtool.mapper;
 
 import lombok.Data;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import za.co.sabs.planningtool.dto.EquipmentDto;
 import za.co.sabs.planningtool.entity.Equipment;
@@ -17,7 +18,7 @@ public class EquipmentMapper implements Function<Equipment, EquipmentDto> {
     private final JobCardMapper jobCardMapper;
     private final ReviewCycleMapper reviewCycleMapper;
 
-    public EquipmentMapper(WarrantyMapper warrantyMapper, MaintenanceCycleMapper maintenanceCycleMapper, ClaimMapper claimMapper, CalibrationMapper calibrationMapper, JobCardMapper jobCardMapper, ReviewCycleMapper reviewCycleMapper) {
+    public EquipmentMapper(WarrantyMapper warrantyMapper, MaintenanceCycleMapper maintenanceCycleMapper, ClaimMapper claimMapper, CalibrationMapper calibrationMapper, @Lazy JobCardMapper jobCardMapper, ReviewCycleMapper reviewCycleMapper) {
         this.warrantyMapper = warrantyMapper;
         this.maintenanceCycleMapper = maintenanceCycleMapper;
         this.claimMapper = claimMapper;

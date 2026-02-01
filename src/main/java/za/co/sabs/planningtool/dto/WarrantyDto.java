@@ -13,7 +13,7 @@ public record WarrantyDto(
         String description,
         String createdBy,
         Boolean active,
-//        EquipmentDto equipment,
+        EquipmentDto equipment,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 ) {

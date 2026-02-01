@@ -48,7 +48,7 @@ public class ReviewCycleController implements BaseController<ReviewCycleDto, Rev
         return ResponseEntity.status(HttpStatus.OK).body(cycle);
     }
 
-    @GetMapping("/{id}")
+    @DeleteMapping("/{id}")
     @Override
     public ResponseEntity<@NonNull ApiResponse<ReviewCycleDto>> deleteById(Long id) {
         ApiResponse<ReviewCycleDto> cycle = processor.deleteById(id);

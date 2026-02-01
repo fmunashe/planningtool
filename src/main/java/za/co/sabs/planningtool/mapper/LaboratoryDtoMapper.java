@@ -1,5 +1,6 @@
 package za.co.sabs.planningtool.mapper;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import za.co.sabs.planningtool.dto.JobCardDto;
 import za.co.sabs.planningtool.dto.LaboratoryDto;
@@ -14,7 +15,7 @@ import java.util.stream.Collectors;
 public class LaboratoryDtoMapper implements Function<Laboratory, LaboratoryDto> {
     private final JobCardMapper jobCardMapper;
 
-    public LaboratoryDtoMapper(JobCardMapper jobCardMapper) {
+    public LaboratoryDtoMapper(@Lazy JobCardMapper jobCardMapper) {
         this.jobCardMapper = jobCardMapper;
     }
 

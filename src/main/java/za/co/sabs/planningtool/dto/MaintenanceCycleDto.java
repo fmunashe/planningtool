@@ -14,6 +14,7 @@ public record MaintenanceCycleDto(
         Boolean active,
         String supplier,
         String description,
+        EquipmentDto equipment,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 

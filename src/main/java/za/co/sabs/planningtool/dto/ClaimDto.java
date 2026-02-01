@@ -15,6 +15,7 @@ public record ClaimDto(
         Boolean active,
         String description,
         String document,
-        String person
+        String person,
+        EquipmentDto equipment
 ) {
 }

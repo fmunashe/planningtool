@@ -13,6 +13,7 @@ import za.co.sabs.planningtool.processor.ReviewCycleProcessor;
 import za.co.sabs.planningtool.service.EquipmentService;
 import za.co.sabs.planningtool.service.ReviewCycleService;
 import za.co.sabs.planningtool.utils.AppConstants;
+import za.co.sabs.planningtool.utils.HelperService;
 import za.co.sabs.planningtool.utils.messages.request.ReviewCycleRequest;
 import za.co.sabs.planningtool.utils.messages.response.basic.ApiResponse;
 import za.co.sabs.planningtool.utils.messages.response.helper.HelperResponse;
@@ -23,12 +24,14 @@ public class ReviewCycleProcessorImpl implements ReviewCycleProcessor {
     private final ReviewCycleMapper mapper;
     private final EquipmentMapper equipmentMapper;
     private final EquipmentService equipmentService;
+    private final HelperService helperService;
 
-    public ReviewCycleProcessorImpl(ReviewCycleService service, ReviewCycleMapper mapper, EquipmentMapper equipmentMapper, EquipmentService equipmentService) {
+    public ReviewCycleProcessorImpl(ReviewCycleService service, ReviewCycleMapper mapper, EquipmentMapper equipmentMapper, EquipmentService equipmentService, HelperService helperService) {
         this.service = service;
         this.mapper = mapper;
         this.equipmentMapper = equipmentMapper;
         this.equipmentService = equipmentService;
+        this.helperService = helperService;
     }
 
     @Override

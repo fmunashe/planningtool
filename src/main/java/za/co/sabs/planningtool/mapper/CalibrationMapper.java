@@ -1,19 +1,19 @@
 package za.co.sabs.planningtool.mapper;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import za.co.sabs.planningtool.dto.CalibrationDto;
-import za.co.sabs.planningtool.dto.EquipmentDto;
 import za.co.sabs.planningtool.entity.Calibration;
-import za.co.sabs.planningtool.entity.Equipment;
+import za.co.sabs.planningtool.utils.HelperService;
 
 import java.util.function.Function;
 
 @Service
 public class CalibrationMapper implements Function<Calibration, CalibrationDto> {
-    private final EquipmentMapper equipmentMapper;
+    private final HelperService helperService;
 
-    public CalibrationMapper(EquipmentMapper equipmentMapper) {
-        this.equipmentMapper = equipmentMapper;
+    public CalibrationMapper(@Lazy HelperService helperService) {
+        this.helperService = helperService;
     }
 
     @Override
@@ -29,13 +29,9 @@ public class CalibrationMapper implements Function<Calibration, CalibrationDto> 
                 calibration.isActive(),
                 calibration.getDescription(),
                 calibration.getDocument(),
-                getEquipment(calibration.getEquipment()),
+                helperService.getEquipment(calibration.getEquipment()),
                 calibration.getCreatedAt(),
                 calibration.getUpdatedAt()
         );
-    }
-
-    private EquipmentDto getEquipment(Equipment equipment) {
-        return equipmentMapper.apply(equipment);
     }
 }
