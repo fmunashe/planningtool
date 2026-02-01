@@ -29,8 +29,6 @@ public class Consumable extends BaseEntity {
     @OneToMany(mappedBy = "consumable", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference("consumable-contact-person")
     private List<ContactPerson> contactPersons = new ArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "consumable_id")
-    @JsonManagedReference("consumable-job-cards")
+    @ManyToMany(mappedBy = "consumables")
     private List<JobCard> jobCards;
 }

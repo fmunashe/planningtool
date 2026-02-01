@@ -20,7 +20,8 @@ public class LaboratoryDtoMapper implements Function<Laboratory, LaboratoryDto> 
 
     @Override
     public LaboratoryDto apply(Laboratory laboratory) {
-        return new LaboratoryDto(laboratory.getId(),
+        return new LaboratoryDto(
+                laboratory.getId(),
                 laboratory.getLabName(),
                 laboratory.getLabNumber(),
                 laboratory.getIsActive(),
@@ -28,6 +29,19 @@ public class LaboratoryDtoMapper implements Function<Laboratory, LaboratoryDto> 
                 mapJobCards(laboratory.getJobCards()),
                 laboratory.getCreatedAt(),
                 laboratory.getUpdatedAt());
+    }
+
+    public Laboratory toEntity(LaboratoryDto dto){
+        if (dto == null) return null;
+        Laboratory lab =  new Laboratory();
+        lab.setId(dto.id());
+        lab.setLabNumber(dto.labName());
+        lab.setLabNumber(dto.labNumber());
+        lab.setIsActive(dto.isActive());
+        lab.setCreatedBy(dto.createdBy());
+        lab.setCreatedAt(dto.createdAt());
+        lab.setUpdatedAt(dto.updatedAt());
+        return lab;
     }
 
     private List<JobCardDto> mapJobCards(List<JobCard> jobCards) {

@@ -47,6 +47,12 @@ public class User extends BaseEntity implements UserDetails {
     @Column(name = "authority")
     private Set<String> authorities = new HashSet<>();
 
+    @ManyToMany(mappedBy = "managers")
+    private Set<JobCard> managerJobCards = new HashSet<>();
+
+    @ManyToMany(mappedBy = "personnel")
+    private Set<JobCard> personnel = new HashSet<>();
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Set<GrantedAuthority> auths = new HashSet<>();

@@ -1,15 +1,14 @@
 package za.co.sabs.planningtool.entity;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -33,11 +32,6 @@ public class TestingMethod extends BaseEntity {
     )
     private List<Activity> activities;
 
-    @OneToMany(
-            mappedBy = "testingMethod",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true,
-            fetch = FetchType.LAZY
-    )
-    private List<JobCard> JobCards;
+    @ManyToMany(mappedBy = "testingMethods")
+    private Set<JobCard> JobCards = new HashSet<>();
 }

@@ -1,5 +1,6 @@
 package za.co.sabs.planningtool.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
@@ -32,6 +33,11 @@ public class Activity extends BaseEntity {
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "testing_method_id", nullable = false)
     private TestingMethod testingMethod;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "jobCard_id", nullable = false)
+    @JsonBackReference("jobcard-activities")
+    private JobCard jobCard;
 
     @BatchSize(size = 20)
     @OneToMany(
