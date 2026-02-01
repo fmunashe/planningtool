@@ -1,5 +1,6 @@
 package za.co.sabs.planningtool.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -39,6 +40,7 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
+    @JsonManagedReference("equipment-warrants")
     private List<Warranty> warranties = new ArrayList<>();
 
     @OneToMany(
@@ -47,6 +49,7 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
+    @JsonManagedReference("equipment-maintenance-cycles")
     private List<MaintenanceCycle> maintenanceCycles = new ArrayList<>();
 
     @OneToMany(
@@ -55,6 +58,7 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
+    @JsonManagedReference("equipment-claims")
     private List<Claim> claims = new ArrayList<>();
     @OneToMany(
             mappedBy = "equipment",
@@ -73,5 +77,6 @@ public class Equipment extends BaseEntity {
             orphanRemoval = true,
             fetch = FetchType.LAZY
     )
+    @JsonManagedReference("equipment-review-cycles")
     private List<ReviewCycle> reviewCycles = new ArrayList<>();
 }
