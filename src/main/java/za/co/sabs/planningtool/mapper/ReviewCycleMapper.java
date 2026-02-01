@@ -8,11 +8,6 @@ import java.util.function.Function;
 
 @Service
 public class ReviewCycleMapper implements Function<ReviewCycle, ReviewCycleDto> {
-    private final EquipmentMapper equipmentMapper;
-
-    public ReviewCycleMapper(EquipmentMapper equipmentMapper) {
-        this.equipmentMapper = equipmentMapper;
-    }
 
     @Override
     public ReviewCycleDto apply(ReviewCycle reviewCycle) {
@@ -26,7 +21,6 @@ public class ReviewCycleMapper implements Function<ReviewCycle, ReviewCycleDto> 
                 reviewCycle.getCoverageEndDate(),
                 reviewCycle.getCreatedBy(),
                 reviewCycle.isActive(),
-                equipmentMapper.apply(reviewCycle.getEquipment()),
                 reviewCycle.getCreatedAt(),
                 reviewCycle.getUpdatedAt()
         );

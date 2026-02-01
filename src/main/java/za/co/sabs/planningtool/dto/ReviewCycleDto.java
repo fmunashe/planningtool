@@ -13,7 +13,6 @@ public record ReviewCycleDto(
         LocalDate coverageEndDate,
         String createdBy,
         boolean active,
-        EquipmentDto equipment,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 ) {

@@ -21,7 +21,6 @@ public class WarrantyMapper implements Function<Warranty, WarrantyDto> {
                 warranty.getDescription(),
                 warranty.getCreatedBy(),
                 warranty.getActive(),
-//                equipmentMapper.apply(warranty.getEquipment()),
                 warranty.getCreatedAt(),
                 warranty.getUpdatedAt()
         );

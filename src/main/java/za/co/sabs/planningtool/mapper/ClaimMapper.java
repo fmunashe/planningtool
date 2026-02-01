@@ -2,19 +2,12 @@ package za.co.sabs.planningtool.mapper;
 
 import org.springframework.stereotype.Service;
 import za.co.sabs.planningtool.dto.ClaimDto;
-import za.co.sabs.planningtool.dto.EquipmentDto;
 import za.co.sabs.planningtool.entity.Claim;
-import za.co.sabs.planningtool.entity.Equipment;
 
 import java.util.function.Function;
 
 @Service
 public class ClaimMapper implements Function<Claim, ClaimDto> {
-    private final EquipmentMapper equipmentMapper;
-
-    public ClaimMapper(EquipmentMapper equipmentMapper) {
-        this.equipmentMapper = equipmentMapper;
-    }
 
     @Override
     public ClaimDto apply(Claim claim) {
@@ -30,12 +23,8 @@ public class ClaimMapper implements Function<Claim, ClaimDto> {
                 claim.getActive(),
                 claim.getDescription(),
                 claim.getDocument(),
-                claim.getPerson(),
-                getEquipment(claim.getEquipment())
+                claim.getPerson()
         );
     }
 
-    private EquipmentDto getEquipment(Equipment equipment) {
-        return equipmentMapper.apply(equipment);
-    }
 }
