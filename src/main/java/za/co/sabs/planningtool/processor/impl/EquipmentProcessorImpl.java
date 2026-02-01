@@ -39,14 +39,14 @@ public class EquipmentProcessorImpl implements EquipmentProcessor {
     @Override
     public ApiResponse<EquipmentDto> save(EquipmentRequest equipmentRequest) {
         Equipment equipment = new Equipment();
-        equipment.setEquipmentNumber(equipment.getEquipmentNumber());
-        equipment.setName(equipment.getName());
-        equipment.setSerialNumber(equipment.getSerialNumber());
-        equipment.setLocation(equipment.getLocation());
+        equipment.setEquipmentNumber(equipmentRequest.getEquipmentNumber());
+        equipment.setName(equipmentRequest.getName());
+        equipment.setSerialNumber(equipmentRequest.getSerialNumber());
+        equipment.setLocation(equipmentRequest.getLocation());
         equipment.setModelName(equipmentRequest.getModelName());
         equipment.setModelNumber(equipmentRequest.getModelNumber());
         equipment.setCost(equipmentRequest.getCost());
-        equipment.setDescription(equipment.getDescription());
+        equipment.setDescription(equipmentRequest.getDescription());
         equipment.setCreatedBy(equipmentRequest.getCreatedBy());
         equipment.setActive(equipmentRequest.getActive());
         equipment.setManufacturer(equipmentRequest.getManufacturer());
@@ -55,7 +55,7 @@ public class EquipmentProcessorImpl implements EquipmentProcessor {
         equipment.setPurchaseDate(equipmentRequest.getPurchaseDate());
         equipment.setExpirationDate(equipmentRequest.getExpirationDate());
         equipment = service.save(equipment);
-        return HelperResponse.buildApiResponse(null, mapper, true, 200, false, AppConstants.SUCCESS_MESSAGE, mapper.apply(equipment));
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, false, AppConstants.SUCCESS_MESSAGE, mapper.apply(equipment));
     }
 
     @Override
@@ -77,7 +77,7 @@ public class EquipmentProcessorImpl implements EquipmentProcessor {
         equipment.setPurchaseDate(equipmentDto.purchaseDate());
         equipment.setExpirationDate(equipmentDto.expirationDate());
         equipment = service.save(equipment);
-        return HelperResponse.buildApiResponse(null, mapper, true, 200, false, AppConstants.SUCCESS_MESSAGE, mapper.apply(equipment));
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, false, AppConstants.SUCCESS_MESSAGE, mapper.apply(equipment));
     }
 
     @Override

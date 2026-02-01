@@ -54,7 +54,7 @@ public class ActivityProcessorImpl implements ActivityProcessor {
     @Override
     public ApiResponse<ActivityDto> findById(Long id) {
         Optional<Activity> optionalActivity = activityService.findById(id);
-        return optionalActivity.map(activity -> HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.FOUND_MESSAGE, mapper.apply(activity)))
+        return optionalActivity.map(activity -> HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.FOUND_MESSAGE, mapper.apply(activity)))
                 .orElseThrow(() -> new RecordNotFoundException("Failed to find activity record with Id of " + id));
 
     }

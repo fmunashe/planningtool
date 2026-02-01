@@ -54,7 +54,7 @@ public class LaboratoryProcessorImpl implements LaboratoryProcessor {
         lab.setIsActive(labRequest.getIsActive());
         lab.setCreatedBy(labRequest.getCreatedBy());
         lab = labService.save(lab);
-        return HelperResponse.buildApiResponse(null, null, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(lab));
+        return HelperResponse.buildApiResponse(null, mapper, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(lab));
     }
 
     @Override
@@ -69,7 +69,7 @@ public class LaboratoryProcessorImpl implements LaboratoryProcessor {
         lab.setLabNumber(laboratoryDto.labNumber());
         Laboratory updatedLab = labService.save(lab);
         LaboratoryDto mappedDto = mapper.apply(updatedLab);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, mappedDto);
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, mappedDto);
     }
 
     @Override
@@ -79,6 +79,6 @@ public class LaboratoryProcessorImpl implements LaboratoryProcessor {
             throw new RecordNotFoundException("Laboratory not found.");
         }
         labService.deleteById(id);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, null);
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, null);
     }
 }

@@ -37,7 +37,7 @@ public class PriorityProcessorImpl implements PriorityProcessor {
     public ApiResponse<PriorityDto> findById(Long id) {
         Optional<Priority> optionalPriority = service.findById(id);
 
-        return optionalPriority.map(priority -> HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.FOUND_MESSAGE, mapper.apply(priority)))
+        return optionalPriority.map(priority -> HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.FOUND_MESSAGE, mapper.apply(priority)))
                 .orElseThrow(() -> new RecordNotFoundException("Failed to find a priority record requested "));
 
     }

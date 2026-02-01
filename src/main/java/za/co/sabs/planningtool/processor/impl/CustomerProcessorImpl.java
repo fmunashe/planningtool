@@ -37,7 +37,7 @@ public class CustomerProcessorImpl implements CustomerProcessor {
     @Override
     public ApiResponse<CustomerDto> findById(Long id) {
         Optional<Customer> optionalCustomer = service.findById(id);
-        return optionalCustomer.map(customer -> HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.FOUND_MESSAGE, mapper.apply(customer)))
+        return optionalCustomer.map(customer -> HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.FOUND_MESSAGE, mapper.apply(customer)))
                 .orElseThrow(() -> new RecordNotFoundException("Failed to find a customer record with Id of " + id));
 
     }
@@ -55,7 +55,7 @@ public class CustomerProcessorImpl implements CustomerProcessor {
         customer.setAccountNumber(customerRequest.getAccountNumber());
         customer.setCustomerId(customerRequest.getCustomerId());
         customer = service.save(customer);
-        return HelperResponse.buildApiResponse(null, null, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(customer));
+        return HelperResponse.buildApiResponse(null, mapper, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(customer));
     }
 
     @Override
