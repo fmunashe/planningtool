@@ -51,7 +51,7 @@ public class PriorityProcessorImpl implements PriorityProcessor {
         Priority priority = new Priority();
         priority.setLevel(priorityRequest.getLevel());
         priority = service.save(priority);
-        return HelperResponse.buildApiResponse(null, null, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(priority));
+        return HelperResponse.buildApiResponse(null, mapper, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(priority));
 
     }
 
@@ -67,7 +67,7 @@ public class PriorityProcessorImpl implements PriorityProcessor {
 
         Priority updatedPriority = service.save(priority);
         PriorityDto mappedDto = mapper.apply(updatedPriority);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, mappedDto);
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, mappedDto);
 
     }
 

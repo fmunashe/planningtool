@@ -72,7 +72,7 @@ public class WarrantyProcessorImpl implements WarrantyProcessor {
         warranty.setCoverageEndDate(warrantyDto.coverageEndDate());
         warranty.setCreatedBy(warrantyDto.createdBy());
         warranty.setActive(warrantyDto.active());
-//        warranty.setEquipment(equipmentMapper.toEntity(warrantyDto.equipment()));
+        warranty.setEquipment(equipmentMapper.toEntity(warrantyDto.equipment()));
         warranty = service.save(warranty);
         return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(warranty));
     }

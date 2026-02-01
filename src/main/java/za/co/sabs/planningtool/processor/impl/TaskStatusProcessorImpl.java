@@ -52,7 +52,7 @@ public class TaskStatusProcessorImpl implements TaskStatusProcessor {
         TaskStatus status = new TaskStatus();
         status.setStatus(taskStatusRequest.getTaskStatus());
         status = service.save(status);
-        return HelperResponse.buildApiResponse(null, null, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(status));
+        return HelperResponse.buildApiResponse(null, mapper, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(status));
 
     }
 
@@ -68,7 +68,7 @@ public class TaskStatusProcessorImpl implements TaskStatusProcessor {
 
         TaskStatus updatedStatus = service.save(status);
         TaskStatusDto mappedDto = mapper.apply(updatedStatus);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, mappedDto);
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, mappedDto);
 
     }
 
@@ -79,7 +79,7 @@ public class TaskStatusProcessorImpl implements TaskStatusProcessor {
             throw new RecordNotFoundException("Task status not found.");
         }
         service.deleteById(id);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, null);
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, null);
 
     }
 }

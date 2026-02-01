@@ -38,7 +38,7 @@ public class UrgencyProcessorImpl implements UrgencyProcessor {
     public ApiResponse<UrgencyDto> findById(Long id) {
         Optional<Urgency> optionalUrgency = service.findById(id);
 
-        return optionalUrgency.map(urgency -> HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.FOUND_MESSAGE, mapper.apply(urgency)))
+        return optionalUrgency.map(urgency -> HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.FOUND_MESSAGE, mapper.apply(urgency)))
                 .orElseThrow(() -> new RecordNotFoundException("Failed to find a task urgency record requested "));
 
     }
@@ -52,7 +52,7 @@ public class UrgencyProcessorImpl implements UrgencyProcessor {
         Urgency urgency = new Urgency();
         urgency.setName(urgencyRequest.getName());
         urgency = service.save(urgency);
-        return HelperResponse.buildApiResponse(null, null, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(urgency));
+        return HelperResponse.buildApiResponse(null, mapper, false, 201, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(urgency));
 
     }
 
@@ -68,7 +68,7 @@ public class UrgencyProcessorImpl implements UrgencyProcessor {
 
         Urgency updatedUrgency = service.save(urgency);
         UrgencyDto mappedDto = mapper.apply(updatedUrgency);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, mappedDto);
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, mappedDto);
 
     }
 
@@ -79,7 +79,7 @@ public class UrgencyProcessorImpl implements UrgencyProcessor {
             throw new RecordNotFoundException("Activity urgency not found.");
         }
         service.deleteById(id);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, null);
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, null);
 
     }
 }

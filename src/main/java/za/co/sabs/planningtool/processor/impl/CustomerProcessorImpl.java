@@ -71,7 +71,7 @@ public class CustomerProcessorImpl implements CustomerProcessor {
         customer.setAccountNumber(customerDto.accountNumber());
         customer.setCustomerId(customerDto.customerId());
         customer = service.save(customer);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(customer));
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, mapper.apply(customer));
     }
 
     @Override
@@ -81,6 +81,6 @@ public class CustomerProcessorImpl implements CustomerProcessor {
             throw new RecordNotFoundException("Customer not found.");
         }
         service.deleteById(id);
-        return HelperResponse.buildApiResponse(null, null, false, 200, true, AppConstants.SUCCESS_MESSAGE, null);
+        return HelperResponse.buildApiResponse(null, mapper, false, 200, true, AppConstants.SUCCESS_MESSAGE, null);
     }
 }
