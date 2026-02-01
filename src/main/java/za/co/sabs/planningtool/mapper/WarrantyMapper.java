@@ -8,11 +8,6 @@ import java.util.function.Function;
 
 @Service
 public class WarrantyMapper implements Function<Warranty, WarrantyDto> {
-    private final EquipmentMapper equipmentMapper;
-
-    public WarrantyMapper(EquipmentMapper equipmentMapper) {
-        this.equipmentMapper = equipmentMapper;
-    }
 
     @Override
     public WarrantyDto apply(Warranty warranty) {
