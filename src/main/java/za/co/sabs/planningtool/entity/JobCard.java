@@ -39,7 +39,7 @@ public class JobCard extends BaseEntity {
             mappedBy = "jobCard",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     private List<Activity> activities = new ArrayList<>();
 

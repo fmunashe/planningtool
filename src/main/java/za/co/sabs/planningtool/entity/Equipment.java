@@ -38,7 +38,7 @@ public class Equipment extends BaseEntity {
             mappedBy = "equipment",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JsonManagedReference("equipment-warrants")
     private List<Warranty> warranties = new ArrayList<>();
@@ -47,7 +47,7 @@ public class Equipment extends BaseEntity {
             mappedBy = "equipment",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JsonManagedReference("equipment-maintenance-cycles")
     private List<MaintenanceCycle> maintenanceCycles = new ArrayList<>();
@@ -56,7 +56,7 @@ public class Equipment extends BaseEntity {
             mappedBy = "equipment",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JsonManagedReference("equipment-claims")
     private List<Claim> claims = new ArrayList<>();
@@ -64,18 +64,18 @@ public class Equipment extends BaseEntity {
             mappedBy = "equipment",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     private List<Calibration> calibrations = new ArrayList<>();
 
-    @ManyToMany(mappedBy = "equipments")
+    @ManyToMany(mappedBy = "equipments",fetch = FetchType.EAGER)
     private Set<JobCard> jobCards = new HashSet<>();
 
     @OneToMany(
             mappedBy = "equipment",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JsonManagedReference("equipment-review-cycles")
     private List<ReviewCycle> reviewCycles = new ArrayList<>();

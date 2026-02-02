@@ -27,7 +27,7 @@ public class ReviewCycle extends BaseEntity {
     private String createdBy;
     private boolean active;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "equipment_id", nullable = false)
     @JsonBackReference("equipment-review-cycles")
     private Equipment equipment;

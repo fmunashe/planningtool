@@ -22,7 +22,7 @@ public class Laboratory extends BaseEntity {
             mappedBy = "laboratory",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     private List<JobCard> JobCards;
 }

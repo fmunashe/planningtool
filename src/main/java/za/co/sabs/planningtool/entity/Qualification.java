@@ -28,7 +28,7 @@ public class Qualification extends BaseEntity {
     private LocalDate endDate;
     private String createdBy;
     private Boolean active;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     @JsonBackReference("user-qualifications")
     private User user;

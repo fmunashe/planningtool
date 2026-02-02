@@ -25,7 +25,7 @@ public class ContactPerson extends BaseEntity {
     private Boolean active;
     private LocalDate contractStartDate;
     private LocalDate contractEndDate;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "consumable_id", nullable = false)
     @JsonBackReference("consumable-contact-person")
     private Consumable consumable;

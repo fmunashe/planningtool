@@ -14,7 +14,7 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 public class Material extends BaseEntity {
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "activity_id", nullable = false)
     @JsonBackReference("activity-materials")
     private Activity activity;

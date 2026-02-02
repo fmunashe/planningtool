@@ -14,7 +14,7 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 public class Parameter extends BaseEntity {
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "activity_id", nullable = false)
     @JsonBackReference("activity-parameters")
     private Activity activity;
